@@ -1,0 +1,9 @@
+node_modules/
+.next/
+out/
+portfolio-site/node_modules/
+portfolio-site/.next/
+portfolio-site/out/
+*.log
+.env
+.DS_Store
