@@ -7,3 +7,5 @@ portfolio-site/out/
 *.log
 .env
 .DS_Storeevidence-register/
+CLAUDE.md
+unresolved-questions.md
