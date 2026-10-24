@@ -1,8 +1,8 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'Olaide Bhadmus | AI-Assisted Software Developer',
-  description: 'Full-stack developer building production applications with React, Next.js, and AI APIs. Solo builder of estate management, agritech, and AI-powered tools.',
+  title: 'Olaide Bhadmus | AI Engineer',
+  description: 'AI engineer building production LLM applications — multi-provider model integration, fallback switching, and full-stack delivery. Solo builder of Career Suite, estate management, and agritech tools in production.',
 }
 
 export default function RootLayout({ children }) {

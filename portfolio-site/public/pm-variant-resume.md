@@ -1,7 +1,7 @@
 # Olaide Bhadmus
 **Product Manager | AI-Enabled Operations Leader**
 Ibadan, Nigeria
-bhadmusolaide@gmail.com | +234-8068530494
+bhadmusolaide@gmail.com
 linkedin.com/in/bhadmus-olaide/
 
 ---

@@ -3,26 +3,20 @@ import { useEffect, useRef } from 'react'
 
 const projects = [
   {
-    id: 'estate',
-    title: 'Achievers Estate Management',
-    tag: 'Landlord & payment system — 60+ residents',
-    img: '/screenshots/estate.png',
-    tech: ['React 19', 'Supabase', 'React-PDF', 'EmailJS', 'TanStack Query', 'Vite'],
-    highlights: ['Payment processing with auto-generated PDF receipts', 'Multi-channel notifications via EmailJS + WhatsApp API', 'Active development through Sept 2026 with real-user feedback'],
-    repo: 'https://github.com/bhadmusolaide/achievers_estate_mgt_zoneD',
-    demo: 'https://zone-dachievers.netlify.app',
-    stat: '60+\nactive users',
-  },
-  {
     id: 'career',
     title: 'Career Suite',
-    tag: 'AI grammar, cover letters & chat — Next.js 16',
+    tag: 'Multi-provider LLM writing suite — Next.js 16',
     img: '/screenshots/career.png',
-    tech: ['Next.js 16', 'React 19', 'TypeScript', 'Prisma', 'Supabase', 'OpenAI', 'Tailwind v4'],
-    highlights: ['Grammar checker, text humanizer, summarizer with 6 AI providers', 'Cover letter generator with resume upload (PDF/DOCX parsing)', 'Chat interface with context-aware writing assistance'],
+    tech: ['Next.js 16', 'React 19', 'TypeScript', 'Prisma', 'Supabase', 'OpenAI', 'Docker', 'Tailwind v4'],
+    highlights: [
+      'One provider interface across OpenAI, Groq, DeepSeek, Qwen, OpenRouter, and Ollama',
+      'Automatic fallback switching — a failed provider call promotes the next in the chain',
+      'Cover letters grounded in parsed resume context (PDF/DOCX upload)',
+    ],
     repo: 'https://github.com/bhadmusolaide/career-suite',
     demo: 'https://career-suite-flax.vercel.app',
     stat: '6 AI\nproviders',
+    caseStudy: true,
   },
   {
     id: 'ai-tools',
@@ -34,6 +28,17 @@ const projects = [
     repo: 'https://github.com/bhadmusolaide/my-ai-tools',
     demo: 'https://my-ai-tools.vercel.app',
     stat: 'TensorFlow.js\n+ Replicate',
+  },
+  {
+    id: 'estate',
+    title: 'Achievers Estate Management',
+    tag: 'Landlord & payment system — 60+ residents',
+    img: '/screenshots/estate.png',
+    tech: ['React 19', 'Supabase', 'React-PDF', 'EmailJS', 'TanStack Query', 'Vite'],
+    highlights: ['Payment processing with auto-generated PDF receipts', 'Multi-channel notifications via EmailJS + WhatsApp API', 'Active development through Sept 2026 with real-user feedback'],
+    repo: 'https://github.com/bhadmusolaide/achievers_estate_mgt_zoneD',
+    demo: 'https://zone-dachievers.netlify.app',
+    stat: '60+\nactive users',
   },
   {
     id: 'feedmate',
@@ -72,17 +77,17 @@ const projects = [
 
 const experience = [
   { role: 'Founder & AI Operations Lead', at: 'Omzo Farmz', period: 'Apr 2025 – Present', bullets: ['Building AI-powered poultry management platform from the ground up', 'FeedMate in production at own 500-bird farm facility', 'Zero-to-one: market research → MVP → deployment'] },
-  { role: 'Operations Manager', at: 'VideoRemix (SaaS)', period: 'Apr 2021 – Aug 2024', bullets: ['Reduced time-to-hire 40% via AI recruitment automation', 'Built 3 custom AI agents (OpenAI) — content mod, docs, transcription', '90% fewer complaints via AI support triage system'] },
-  { role: 'Development Teams Manager', at: 'LTV Fund (Fintech)', period: 'Nov 2021 – Jun 2022', bullets: ['95% on-time releases across 7 distributed teams', 'AI sprint planning + automated metrics pipeline (Zapier/Python)', 'Processed 10K+ monthly feedback entries via AI analysis'] },
-  { role: 'Operations Manager', at: 'Txt2Give (Fintech)', period: 'Mar 2021 – Nov 2021', bullets: ['25% CSAT improvement via AI-powered response recommendations', 'Intelligent ticket routing for 50+ weekly tickets'] },
+  { role: 'Operations Manager', at: 'VideoRemix (SaaS)', period: 'Apr 2021 – Aug 2024', bullets: ['Built 3 OpenAI-powered agents running in production — content moderation, documentation generation, meeting transcription', 'AI support triage: classified and routed inbound tickets automatically — Tier-1 resolution cut from 4 hours to 45 minutes, 90% fewer complaints', 'AI recruitment screening pipeline with automated screening and fit scoring — 40% faster time-to-hire', 'AI-assisted delivery tracking — project risk detection and standup summaries lifted on-schedule sprint delivery from 45% to 70%'] },
+  { role: 'Development Teams Manager', at: 'LTV Fund (Fintech)', period: 'Nov 2021 – Jun 2022 · concurrent with VideoRemix', bullets: ['Ran delivery for 7 distributed dev teams across fintech and social-impact products — 95% on-time releases, code review and release discipline', 'Automated metrics pipeline (Zapier + Python) with anomaly-detection alerts — 15% less admin overhead', 'AI analysis pipeline for 10,000+ monthly user-feedback entries'] },
+  { role: 'Operations Manager', at: 'Txt2Give (Fintech)', period: 'Mar 2021 – Nov 2021 · concurrent with VideoRemix', bullets: ['Piloted AI response recommendations in support — 25% CSAT improvement', 'Intelligent ticket routing for 50+ weekly tickets — 30% faster resolution'] },
 ]
 
 const skills = [
+  { cat: 'AI Engineering', items: ['OpenAI', 'Claude', 'Gemini', 'Groq', 'DeepSeek', 'Qwen', 'Ollama', 'AI Agents', 'Prompt Design', 'Fallback & Rate-Limit Handling'] },
   { cat: 'Frontend', items: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'React Native', 'Zustand', 'Vite'] },
   { cat: 'Backend & Data', items: ['Node.js', 'Express', 'Supabase', 'Firebase', 'PostgreSQL', 'REST APIs'] },
-  { cat: 'AI & APIs', items: ['OpenAI', 'Claude', 'Gemini', 'Groq', 'LangChain', 'AI Agents'] },
-  { cat: 'DevOps & Tools', items: ['Vercel', 'Git', 'Docker', 'Cursor', 'KiloCode'] },
-  { cat: 'Testing', items: ['Jest', 'Cypress', 'k6', 'Vitest'] },
+  { cat: 'DevOps & Tools', items: ['Vercel', 'Git', 'Docker', 'Python', 'Zapier', 'Cursor', 'KiloCode'] },
+  { cat: 'Testing & Evals', items: ['Jest', 'Cypress', 'k6', 'Vitest'] },
   { cat: 'Operations', items: ['Agile/Scrum', 'Process Automation', 'Remote Leadership'] },
 ]
 
@@ -113,6 +118,7 @@ export default function Home() {
           <div className="flex items-center gap-6 text-sm text-[#71717a]">
             <a href="#work" className="hover:text-[#e4e4e7] transition-colors">Work</a>
             <a href="#projects" className="hover:text-[#e4e4e7] transition-colors">Projects</a>
+            <a href="/case-studies/career-suite" className="hover:text-[#e4e4e7] transition-colors">Case Study</a>
             <a href="#skills" className="hover:text-[#e4e4e7] transition-colors">Skills</a>
             <a href="/master-resume.html" target="_blank" className="text-amber-500 hover:text-amber-400 transition-colors font-medium">Resume →</a>
           </div>
@@ -123,15 +129,15 @@ export default function Home() {
       <section className="pt-36 pb-28 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="max-w-4xl">
-            <p className="text-amber-500/80 text-sm font-medium tracking-widest uppercase mb-6 animate-in">Olaide Bhadmus</p>
+            <p className="text-amber-500/80 text-sm font-medium tracking-widest uppercase mb-6 animate-in">Olaide Bhadmus — AI Engineer</p>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight mb-8 animate-in-d1">
-              <span className="text-white">Full-stack applications</span>
+              <span className="text-white">LLM-powered applications,</span>
               <br />
-              <span className="text-[#52525b]">built with AI acceleration.</span>
+              <span className="text-[#52525b]">from provider integration to production.</span>
             </h1>
             <p className="text-lg text-[#71717a] leading-relaxed max-w-2xl mb-12 animate-in-d2">
-              React, Next.js, TypeScript, Supabase, AI APIs. 8 years in operations leadership.
-              I architect and ship — from database schema to production deploy.
+              Six AI providers behind one interface with automatic fallback. Production apps serving 60+ real users.
+              Previously led operations at US SaaS companies, deploying OpenAI-powered agents against real business problems.
             </p>
             <div className="flex flex-wrap items-center gap-10 animate-in-d3">
               <a href="#projects" className="inline-flex items-center gap-2 bg-white text-[#0a0a0b] px-6 py-3 rounded-lg font-semibold text-sm hover:bg-[#e4e4e7] transition-colors">
@@ -143,7 +149,7 @@ export default function Home() {
               </a>
             </div>
             <div className="flex flex-wrap gap-10 mt-16 animate-in-d4">
-              <div><div className="text-3xl font-bold text-white">8</div><div className="text-sm text-[#71717a] mt-1">applications shipped</div></div>
+              <div><div className="text-3xl font-bold text-white">6</div><div className="text-sm text-[#71717a] mt-1">applications shipped</div></div>
               <div><div className="text-3xl font-bold text-white">3</div><div className="text-sm text-[#71717a] mt-1">in production</div></div>
               <div><div className="text-3xl font-bold text-white">60+</div><div className="text-sm text-[#71717a] mt-1">active users</div></div>
               <div><div className="text-3xl font-bold text-white">6</div><div className="text-sm text-[#71717a] mt-1">AI providers integrated</div></div>
@@ -156,8 +162,8 @@ export default function Home() {
       <section id="work" className="py-28 px-6 border-t border-[#1f1f23]">
         <div className="max-w-6xl mx-auto">
           <p className="text-amber-500/80 text-sm font-medium tracking-widest uppercase mb-3 reveal">Experience</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3 reveal">Operations leadership at<br />US SaaS companies.</h2>
-          <p className="text-[#71717a] mb-20 max-w-xl reveal">Remote roles spanning fintech, video SaaS, and my own agritech venture.</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3 reveal">Applied AI in production<br />at US SaaS companies.</h2>
+          <p className="text-[#71717a] mb-20 max-w-xl reveal">These roles ran operations on the surface — underneath, I built and deployed the AI systems the metrics came from.</p>
           <div className="space-y-6">
             {experience.map((exp, i) => (
               <Reveal key={i}>
@@ -189,7 +195,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <p className="text-amber-500/80 text-sm font-medium tracking-widest uppercase mb-3 reveal">Projects</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3 reveal">Selected projects.</h2>
-          <p className="text-[#71717a] mb-20 max-w-xl reveal">Production applications across real estate, agritech, e-commerce, and AI tools.</p>
+          <p className="text-[#71717a] mb-20 max-w-xl reveal">AI applications lead — the rest are proof I ship and maintain systems with real users.</p>
           <div className="space-y-5">
             {projects.map((p, i) => (
               <Reveal key={p.id}>
@@ -218,6 +224,7 @@ export default function Home() {
                       <div className="flex gap-4 text-sm">
                         <a href={p.repo} target="_blank" rel="noopener noreferrer" className="text-[#71717a] hover:text-white transition-colors font-medium">Source →</a>
                         {p.demo && <a href={p.demo} target="_blank" rel="noopener noreferrer" className="text-amber-500 hover:text-amber-400 transition-colors font-medium">Live →</a>}
+                        {p.caseStudy && <a href="/case-studies/career-suite" className="text-[#a1a1aa] hover:text-white transition-colors font-medium">Case study →</a>}
                       </div>
                     </div>
                     <div className="lg:w-1/3 relative min-h-[180px] lg:min-h-[240px] bg-[#0d0d0e] overflow-hidden">
@@ -270,21 +277,22 @@ export default function Home() {
       <section id="about" className="py-28 px-6 border-t border-[#1f1f23]">
         <div className="max-w-6xl mx-auto">
           <p className="text-amber-500/80 text-sm font-medium tracking-widest uppercase mb-3 reveal">About</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 reveal">How I build.</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 reveal">How I work.</h2>
           <div className="grid md:grid-cols-2 gap-8 reveal">
             <div className="border border-[#1f1f23] rounded-xl p-8">
               <p className="text-[#a1a1aa] leading-relaxed mb-5">
-                I build production applications. From estate management serving 60+ landlords
-                to cross-platform agritech tools — each project starts with a problem, goes through
-                architecture and database design, then ships to real users.
+                AI engineer who builds production LLM applications solo, from multi-provider model
+                integration to deployment. Previously led operations at US SaaS companies, where I built
+                OpenAI-powered agents for content moderation, support triage, and recruitment screening.
+                I care about systems that work reliably for real users, not just demos.
               </p>
               <p className="text-[#71717a] leading-relaxed text-sm mb-5">
-                My approach: design the system, build the backend, build the frontend, test, deploy, iterate.
-                I use modern AI tools to accelerate development without cutting corners on quality.
+                I use AI coding tools (Cursor, KiloCode) to ship faster — the difference is what gets shipped:
+                systems with fallback handling, tested calculation engines, and real users to answer to.
               </p>
               <p className="text-[#71717a] leading-relaxed text-sm">
-                Before focusing on software, I spent 8+ years in operations leadership at US SaaS companies.
-                That background means I build software that solves operational problems — not just tech demos.
+                My solo projects ship end-to-end, but not in isolation — I've managed 7 distributed dev teams
+                (code review, release discipline, sprint delivery), so I know how team codebases run.
               </p>
             </div>
             <div className="border border-[#1f1f23] rounded-xl p-8">
@@ -311,7 +319,7 @@ export default function Home() {
       <footer className="py-8 px-6 border-t border-[#1f1f23]">
         <div className="max-w-6xl mx-auto flex items-center justify-between text-sm text-[#52525b]">
           <p>© {new Date().getFullYear()} Olaide Bhadmus</p>
-          <p>AI-Assisted Software Developer</p>
+          <p>AI Engineer</p>
         </div>
       </footer>
 

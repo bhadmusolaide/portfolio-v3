@@ -6,6 +6,7 @@ portfolio-site/.next/
 portfolio-site/out/
 *.log
 .env
-.DS_Storeevidence-register/
+.DS_Store
+evidence-register/
 CLAUDE.md
 unresolved-questions.md
