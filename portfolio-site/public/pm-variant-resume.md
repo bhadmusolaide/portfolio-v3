@@ -59,6 +59,7 @@ Product Manager with 8+ years leading remote SaaS teams and building AI-powered 
 ## EDUCATION & CERTIFICATIONS
 
 **B.Tech, Computer Science** — Our Saviour Institute of Science, Agriculture and Technology (OSISATECH), 2010
+Claude Certified Developer — Foundations — Anthropic (2026) — [Verify badge](https://www.credly.com/badges/b86c225b-5c83-428d-9c56-8224dcbe3209/public_url)
 Product Management Professional — LinkedIn Learning (Feb 2025)
 Workflow Specialist — Asana (Jan 2025)
 Project Management & Data Analytics — Coursera (2024)

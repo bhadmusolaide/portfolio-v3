@@ -138,6 +138,7 @@ export default function Home() {
             <p className="text-lg text-[#71717a] leading-relaxed max-w-2xl mb-12 animate-in-d2">
               Six AI providers behind one interface with automatic fallback. Production apps serving 60+ real users.
               Previously led operations at US SaaS companies, deploying OpenAI-powered agents against real business problems.
+              Claude Certified Developer (Anthropic).
             </p>
             <div className="flex flex-wrap items-center gap-10 animate-in-d3">
               <a href="#projects" className="inline-flex items-center gap-2 bg-white text-[#0a0a0b] px-6 py-3 rounded-lg font-semibold text-sm hover:bg-[#e4e4e7] transition-colors">
@@ -281,10 +282,11 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8 reveal">
             <div className="border border-[#1f1f23] rounded-xl p-8">
               <p className="text-[#a1a1aa] leading-relaxed mb-5">
-                AI engineer who builds production LLM applications solo, from multi-provider model
-                integration to deployment. Previously led operations at US SaaS companies, where I built
-                OpenAI-powered agents for content moderation, support triage, and recruitment screening.
-                I care about systems that work reliably for real users, not just demos.
+                AI engineer and Claude Certified Developer (Anthropic) who builds production LLM
+                applications solo, from multi-provider model integration to deployment. Previously led
+                operations at US SaaS companies, where I built OpenAI-powered agents for content moderation,
+                support triage, and recruitment screening. I care about systems that work reliably for real
+                users, not just demos.
               </p>
               <p className="text-[#71717a] leading-relaxed text-sm mb-5">
                 I use AI coding tools (Cursor, KiloCode) to ship faster — the difference is what gets shipped:
@@ -301,6 +303,7 @@ export default function Home() {
               <p className="text-sm text-[#71717a] mb-6">OSISATECH, 2010</p>
               <p className="text-xs font-medium text-amber-500/80 tracking-wider uppercase mb-3">Certifications</p>
               <div className="space-y-1 text-sm text-[#71717a] mb-6">
+                <p><a href="https://www.credly.com/badges/b86c225b-5c83-428d-9c56-8224dcbe3209/public_url" target="_blank" rel="noopener noreferrer" className="text-amber-500 hover:text-amber-400 transition-colors">Claude Certified Developer — Foundations (2026) →</a></p>
                 <p>Asana Workflow Specialist (2025)</p>
                 <p>LinkedIn Learning PM (2025)</p>
                 <p>Coursera PM & Data Analytics (2024)</p>

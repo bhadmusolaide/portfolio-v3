@@ -8,7 +8,7 @@ linkedin.com/in/bhadmus-olaide/ | github.com/bhadmusolaide
 
 ## PROFESSIONAL SUMMARY
 
-AI engineer who builds production LLM applications solo, from multi-provider model integration (6 providers, automatic fallback switching) to deployment. Previously led operations at US SaaS companies, where I built OpenAI-powered agents for content moderation, support triage, and recruitment screening. Ships full-stack systems that work reliably for real users, not just demos.
+AI engineer and Claude Certified Developer – Foundations (Anthropic) who builds production LLM applications solo, from multi-provider model integration (6 providers, automatic fallback switching) to deployment. Previously led operations at US SaaS companies, where I built OpenAI-powered agents for content moderation, support triage, and recruitment screening. Ships full-stack systems that work reliably for real users, not just demos.
 
 ---
 
@@ -93,6 +93,7 @@ AI engineer who builds production LLM applications solo, from multi-provider mod
 ## EDUCATION & CERTIFICATIONS
 
 **B.Tech, Computer Science** — Our Saviour Institute of Science, Agriculture and Technology (OSISATECH), 2010
+Claude Certified Developer — Foundations — Anthropic (2026) — [Verify badge](https://www.credly.com/badges/b86c225b-5c83-428d-9c56-8224dcbe3209/public_url)
 Workflow Specialist — Asana (Jan 2025)
 Product Management Professional — LinkedIn Learning (Feb 2025)
 Project Management & Data Analytics — Coursera (2024)
