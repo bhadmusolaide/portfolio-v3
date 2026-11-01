@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useRef } from 'react'
-import DemoLink from './components/Media'
+import { DemoLink } from './components/Media'
 import ProjectScreenshot from './components/ProjectScreenshot'
 
 const projects = [
@@ -241,7 +241,7 @@ export default function Home() {
                       <div className="flex flex-wrap gap-4 text-sm">
                         <a href={p.repo} target="_blank" rel="noopener noreferrer" className="text-[#71717a] hover:text-white transition-colors font-medium">Source →</a>
                         {p.demo && <a href={p.demo} target="_blank" rel="noopener noreferrer" className="text-amber-500 hover:text-amber-400 transition-colors font-medium">Live →</a>}
-                        {p.demoVideo && p.caseStudy && <DemoLink href={`${p.caseStudy}#demo`} className="text-amber-500 hover:text-amber-400 transition-colors font-medium" />}
+                        {p.demoVideo && p.caseStudy && <DemoLink href={p.demoVideo.mp4} className="text-amber-500 hover:text-amber-400 transition-colors font-medium" />}
                         {p.caseStudy && <a href={p.caseStudy} className="text-[#a1a1aa] hover:text-white transition-colors font-medium">Case study →</a>}
                       </div>
                     </div>

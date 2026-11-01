@@ -31,8 +31,8 @@ function useMediaStatus(src) {
 
 export function DemoLink({ href, className }) {
   return (
-    <a href={href} className={className}>
-      Watch demo →
+    <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
+      Demo →
     </a>
   )
 }
