@@ -26,6 +26,7 @@
   .case-link { font-size: 12px; }
   .case-link a { color: var(--accent); text-decoration: none; font-weight: 600; }
   .summary { font-size: 14px; color: #3f3f46; }
+  .edu { font-size: 13.5px; color: #3f3f46; }
 
   /* Toolbar (screen only) */
   .toolbar { max-width: 820px; margin: 0 auto 16px; display: flex; gap: 10px; align-items: center; }
@@ -61,7 +62,7 @@
   <button class="btn" onclick="window.print()">Download PDF</button>
   <a class="btn ghost" href="/ats-software-dev-resume.md" target="_blank">ATS version (.md)</a>
   <a class="btn ghost" href="/pm-variant-resume.md" target="_blank">PM variant (.md)</a>
-  <span class="hint">Use “Save as PDF” in the print dialog</span>
+  <span class="hint">Use "Save as PDF" in the print dialog</span>
 </div>
 
 <div class="sheet">
@@ -73,111 +74,105 @@
   <a href="https://github.com/bhadmusolaide">github.com/bhadmusolaide</a> &nbsp;|&nbsp;
   Ibadan, Nigeria
 </div>
-<div class="subtitle">AI Engineer &bull; Full-Stack Developer</div>
+<div class="subtitle">Applied AI Engineer &bull; Full-Stack Developer</div>
 
 <h2>Professional Summary</h2>
-<p class="summary">AI engineer and Claude Certified Developer (Anthropic) who builds production LLM applications solo, from multi-provider model integration to deployment. Previously led operations at US SaaS companies, where I built OpenAI-powered agents for content moderation, support triage, and recruitment screening. I care about systems that work reliably for real users, not just demos.</p>
+<p class="summary">Applied AI engineer who builds LLM applications end to end and has run the operations they automate. Built a multi-provider LLM writing suite with provider switching and whole-resume-grounded cover letters; shipped production apps, including one running at my own 500-bird poultry farm and one serving 60+ landlords. Previously ran operations at US SaaS companies, where I applied LLMs to support, hiring, and delivery workflows. Claude Certified Developer &ndash; Foundations (Anthropic).</p>
+
+<h2>Selected Projects</h2>
+
+<h3>Career Suite &mdash; Multi-Provider LLM Writing Suite <span class="badge">Live</span></h3>
+<div class="section-desc">Next.js 16, React 19, TypeScript, Prisma, PostgreSQL, Tailwind CSS</div>
+<ul>
+  <li>One provider interface across OpenAI, Groq, OpenRouter, Anthropic, and Together AI, with admin-configurable base URLs and models</li>
+  <li>Cover letters grounded in parsed resume context (PDF/DOCX upload) using whole-document injection rather than chunked retrieval</li>
+  <li>Grammar, humanize, summarize, concise, and chat tools share one prompt layer; admin settings encrypt provider keys and stream chat responses</li>
+  <li>Live: <a href="https://career-suite-flax.vercel.app">career-suite-flax.vercel.app</a> &middot; Case study: <a href="https://olaide-portfolio.netlify.app/case-studies/career-suite">olaide-portfolio.netlify.app/case-studies/career-suite</a></li>
+</ul>
+
+<h3>Pageside &mdash; Job-Application Drafting Extension <span class="badge">Open Source (MIT)</span></h3>
+<div class="section-desc">TypeScript, React, Vite, Tailwind CSS, Chrome MV3, IndexedDB</div>
+<ul>
+  <li>Drafts tailored answers to application-form questions from a personal vault (resume, notes, tone samples) instead of generic AI text; no backend, bring-your-own API key</li>
+  <li>Five LLM providers (OpenRouter, Anthropic, OpenAI, xAI, Groq) behind one service-worker layer, with streamed responses</li>
+  <li>Local retrieval over the vault (keyword, TF-IDF, experimental feature-hashed vectors); each draft lists its sources and flags unsupported facts as "NEEDS INPUT"</li>
+  <li>Approval-first by design: never auto-submits, per-site permissions, undo, and token and cost controls per answer</li>
+  <li>Source: <a href="https://github.com/bhadmusolaide/pageside">github.com/bhadmusolaide/pageside</a> &middot; Case study: <a href="https://olaide-portfolio.netlify.app/case-studies/pageside">olaide-portfolio.netlify.app/case-studies/pageside</a></li>
+</ul>
+
+<h3>Achievers Estate Management System <span class="badge">Production &mdash; 60+ Landlords</span></h3>
+<div class="section-desc">React 19, Vite, Supabase, EmailJS, React-PDF, TanStack Query</div>
+<ul>
+  <li>Solo-built landlord management system: payment processing with PDF receipts, EmailJS + WhatsApp notifications, Supabase RLS</li>
+  <li>In production and actively maintained, with changes driven by user feedback</li>
+</ul>
 
 <h2>Employment History</h2>
 
-<h3>Founder &amp; AI Operations Lead</h3>
-<div class="job-meta">Omzo Farmz — Ibadan, Nigeria | Apr 2025 – Present</div>
+<h3>Co-founder &amp; Software Engineer</h3>
+<div class="job-meta">Omzo Farmz &mdash; Ibadan, Nigeria | Apr 2025 &ndash; Present</div>
 <ul>
-  <li>Built cross-platform poultry management platform (Next.js web + React Native mobile) serving African farmers; architecture, database design, shared business logic, and deployment done solo</li>
-  <li>Developed feed optimization algorithms using JavaScript with real-time pricing config — in production at own 500-bird farm facility</li>
-  <li>Built companion stock management system (React + Supabase) with order management, audit trails, role-based access control, and feed inventory tracking</li>
-  <li>Deployed and managed both applications via Vercel with Supabase PostgreSQL backend</li>
+  <li>Built the management system now running my own 500-bird farm, lifting batches per year from 7 to 9 (+29%), shortening time to market weight from 6 weeks to 5 weeks 2 days (~12% faster), and lowering feed and medication spend per batch</li>
+  <li>Designed and built a cross-platform farm management system and FeedMate, a feed optimization tool (Next.js web + React Native mobile) for African farmers, solo: architecture, shared business logic, database design, and deployment on Vercel with Supabase PostgreSQL</li>
+  <li>Built a companion stock management system (React + Supabase): orders, audit trails, role-based access control, feed inventory</li>
 </ul>
 
 <h3>Operations Manager</h3>
-<div class="job-meta">VideoRemix — Delaware, US (Remote) | Apr 2021 – Aug 2024</div>
+<div class="job-meta">VideoRemix &mdash; Delaware, US (Remote) | Apr 2021 &ndash; Aug 2024</div>
 <ul>
-  <li>Built 3 OpenAI-powered agents running in production — content moderation, documentation generation, and meeting transcription</li>
-  <li>AI support triage: classified and routed inbound tickets automatically — Tier-1 resolution cut from 4 hours to 45 minutes, 90% fewer complaints</li>
-  <li>AI recruitment screening pipeline with automated screening and fit scoring — 40% faster time-to-hire</li>
-  <li>AI-assisted delivery tracking — project risk detection and standup summaries lifted on-schedule sprint delivery from 45% to 70%</li>
+  <li>Cut time-to-hire by 40% by rebuilding the recruitment workflow</li>
+  <li>Raised on-schedule sprint delivery from 45% to 70% through tighter sprint planning, risk tracking, and standup summaries</li>
+  <li>Brought Tier-1 resolution time down from 4 hours to 45 minutes and cut customer complaints 90% by restructuring support triage and routing</li>
+  <li>Used OpenAI to classify and route inbound support tickets; built internal tools on the OpenAI API for content moderation, documentation generation, and meeting transcription, in production</li>
+  <li>Managed the company AWS account, including S3 storage, IAM users and access policies, and domain management; produced monthly P&amp;L reports for management</li>
 </ul>
 
 <h3>Development Teams Manager</h3>
-<div class="job-meta">LTV Fund — Delaware, US (Remote) | Nov 2021 – Jun 2022 · concurrent with VideoRemix</div>
+<div class="job-meta">LTV Fund &mdash; Delaware, US (Remote) | Nov 2021 &ndash; Jun 2022 &middot; concurrent with VideoRemix</div>
 <ul>
-  <li>Ran delivery for 7 distributed development teams across fintech and social-impact products — 95% on-time releases, code review and release discipline</li>
-  <li>Reduced administrative overhead 15% by building an automated metrics pipeline (Zapier + Python) with anomaly-detection alerts</li>
-  <li>Built an AI analysis pipeline processing 10,000+ monthly user-feedback entries</li>
+  <li>Ran delivery for 7 distributed development teams across fintech and social-impact products, with 95% on-time releases</li>
+  <li>Cut administrative overhead 15% with an automated metrics pipeline (Zapier + Python), including rule-based and statistical alerts for abnormal metrics</li>
+  <li>Built a pipeline using an LLM to surface themes in 10,000+ monthly user-feedback entries</li>
 </ul>
 
 <h3>Operations Manager</h3>
-<div class="job-meta">Txt2Give — Delaware, US (Remote) | Mar 2021 – Nov 2021 · concurrent with VideoRemix</div>
+<div class="job-meta">Txt2Give &mdash; Delaware, US (Remote) | Mar 2021 &ndash; Nov 2021 &middot; concurrent with VideoRemix</div>
 <ul>
-  <li>Piloted AI-powered response recommendations in support — 25% CSAT improvement</li>
-  <li>Managed 50+ weekly tickets with 30% faster resolution via intelligent routing and automated escalation protocols</li>
+  <li>Raised customer satisfaction 25% by overhauling the support process</li>
+  <li>Managed 50+ weekly tickets with 30% faster resolution through ticket routing and escalation rules</li>
+  <li>Piloted AI-suggested response recommendations in support</li>
 </ul>
 
-<h2>Software Projects</h2>
-
-<h3>Career Suite — Multi-Provider LLM Writing Suite <span class="badge">Live</span></h3>
-<div class="section-desc">Next.js 16, React 19, TypeScript, Prisma, Supabase, Node.js/Express, Docker</div>
+<h2>Other Projects</h2>
 <ul>
-  <li>One provider interface across OpenAI, Groq, DeepSeek, Qwen, OpenRouter, and Ollama, with automatic fallback switching on rate limits, timeouts, and errors</li>
-  <li>Cover letter generation grounded in parsed resume context (PDF/DOCX upload) — no claims outside the source resume</li>
-  <li>Grammar, humanizer, and summarizer tasks share one prompt-and-eval set used to validate providers before they join the fallback chain</li>
-  <li>Live at <a href="https://career-suite-flax.vercel.app">career-suite-flax.vercel.app</a> · <a href="/case-studies/career-suite">full case study</a></li>
-</ul>
-
-<h3>AI Image Tools <span class="badge">Deployed</span></h3>
-<div class="section-desc">React 18, TypeScript, TensorFlow.js, Replicate API, AWS S3, Firebase</div>
-<ul>
-  <li>AI image processing suite: background removal, upscaling, object removal, photo editor, animation</li>
-  <li>Full admin panel — users, roles, features, settings — with AWS S3 storage integration</li>
-</ul>
-
-<h3>Achievers Estate Management System <span class="badge">Production — 60+ Landlords</span></h3>
-<div class="section-desc">React 19, Vite, Supabase, EmailJS, React-PDF, TanStack Query</div>
-<ul>
-  <li>Solo-built full-stack landlord management system: payment processing with PDF receipts, EmailJS + WhatsApp notifications, landlord database with Supabase RLS</li>
-  <li>In production serving 60+ landlords with active development through Sept 2026</li>
-</ul>
-
-<h3>Omzo Farmz — Poultry Feed Calculator (FeedMate) <span class="badge">Production</span></h3>
-<div class="section-desc">Next.js 14, React Native/Expo, Zustand, Jest, Monorepo, PWA</div>
-<ul>
-  <li>Cross-platform application for African poultry farmers with shared business logic between web and mobile</li>
-  <li>Jest-tested feed optimization engine (broiler/layer phases), multi-currency support for Nigeria, Ghana, Kenya</li>
-  <li>In production at own farm facility</li>
-</ul>
-
-<h3>Omzo Farmz — Stock Management System <span class="badge">Production</span></h3>
-<div class="section-desc">React 18, Vite, Supabase (PostgreSQL), Recharts</div>
-<ul>
-  <li>Orders, inventory, financial transactions, audit trails; role-based access control with real-time dashboard</li>
-  <li>PostgreSQL schema with indexes, triggers, and Row Level Security</li>
-</ul>
-
-<h3>Yours E-Commerce Platform <span class="badge">Deployed</span></h3>
-<div class="section-desc">Next.js 14, TypeScript, Firebase, Tailwind CSS, Stripe, PayPal</div>
-<ul>
-  <li>Full admin panel, Firestore security rules, CSRF protection, CSP headers, rate limiting, Firebase Authentication</li>
-  <li>Cypress E2E tests, k6 load tests (5 scenarios), Stripe/PayPal payments</li>
+  <li><strong>Yours E-Commerce</strong> &mdash; Next.js 14, Firebase, Stripe/PayPal; admin panel, Firestore rules, CSRF/CSP, Cypress E2E and k6 load tests</li>
+  <li><strong>AI Image Tools</strong> &mdash; React, TensorFlow.js, Replicate API, AWS S3; background removal, upscaling, object removal, admin panel</li>
+  <li><strong>FeedMate</strong> &mdash; feed planning tool for new poultry farmers: calculator with save and auto-progression, feeding schedule, weekly summary, daily dashboard, breed comparison; Jest-tested engine shared across web and mobile, offline PWA</li>
+  <li><strong>Stock Management</strong> &mdash; React + Supabase; orders, audit trails, role-based access control, feed inventory (see Omzo Farmz above)</li>
 </ul>
 
 <h2>Technical Skills</h2>
 <p>
   <span class="tag">React</span> <span class="tag">Next.js</span> <span class="tag">TypeScript</span> <span class="tag">JavaScript</span> <span class="tag">React Native</span>
   <span class="tag">Node.js</span> <span class="tag">Express</span> <span class="tag">Supabase</span> <span class="tag">Firebase</span> <span class="tag">PostgreSQL</span> <span class="tag">SQL</span>
-  <span class="tag">OpenAI API</span> <span class="tag">Claude API</span> <span class="tag">Gemini API</span> <span class="tag">Groq</span> <span class="tag">DeepSeek</span> <span class="tag">Qwen</span> <span class="tag">Ollama</span>
-  <span class="tag">Docker</span> <span class="tag">AWS S3</span> <span class="tag">Python</span> <span class="tag">Zapier</span>
-  <span class="tag">Vercel</span> <span class="tag">Git</span> <span class="tag">Tailwind CSS</span> <span class="tag">Zustand</span> <span class="tag">Jest</span> <span class="tag">Cypress</span> <span class="tag">Vite</span>
+  <span class="tag">Docker</span> <span class="tag">Vercel</span> <span class="tag">AWS S3</span> <span class="tag">Python</span> <span class="tag">Zapier</span>
+  <span class="tag">Git</span> <span class="tag">Tailwind CSS</span> <span class="tag">Zustand</span> <span class="tag">Vite</span>
+  <span class="tag">Chrome Extensions (MV3)</span> <span class="tag">IndexedDB</span>
+  <span class="tag">OpenAI API</span> <span class="tag">Anthropic (Claude) API</span> <span class="tag">Groq</span> <span class="tag">OpenRouter</span> <span class="tag">Together AI</span> <span class="tag">xAI (Grok)</span>
+  <span class="tag">Prompt Design</span> <span class="tag">Retrieval over Private Documents</span> <span class="tag">Streaming Responses</span> <span class="tag">Token &amp; Cost Controls</span> <span class="tag">Multi-Provider Integration</span>
+  <span class="tag">Jest</span> <span class="tag">Cypress</span> <span class="tag">k6</span>
+  <span class="tag">Gemini API</span>
 </p>
 
 <h2>Education</h2>
-<p><strong>B.Tech, Computer Science</strong> — Our Saviour Institute of Science, Agriculture and Technology (OSISATECH), 2010</p>
+<p class="edu"><strong>B.Tech, Computer Science</strong> &mdash; OSISATECH</p>
 
 <h2>Certifications</h2>
 <ul>
-  <li><a href="https://www.credly.com/badges/b86c225b-5c83-428d-9c56-8224dcbe3209/public_url">Claude Certified Developer — Foundations</a> — Anthropic (2026)</li>
-  <li>Workflow Specialist — Asana (Jan 2025)</li>
-  <li>Product Management Professional — LinkedIn Learning (Feb 2025)</li>
-  <li>Project Management &amp; Data Analytics — Coursera (2024)</li>
+  <li><a href="https://www.credly.com/badges/b86c225b-5c83-428d-9c56-8224dcbe3209/public_url">Claude Certified Developer &mdash; Foundations</a> &mdash; Anthropic (2026)</li>
+  <li>Asana Workflow Specialist (2025)</li>
+  <li>LinkedIn Learning PM (2025)</li>
+  <li>Coursera PM &amp; Data Analytics (2024)</li>
 </ul>
 
 </div>
