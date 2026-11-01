@@ -7,3 +7,8 @@ portfolio-site/out/
 *.log
 .env
 .DS_Store
+evidence-register/
+CLAUDE.md
+unresolved-questions.md
+PROJECT-SUMMARY.md
+portfolio-site/out/*.md
